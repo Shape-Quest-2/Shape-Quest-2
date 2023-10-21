@@ -42,7 +42,7 @@ function SignUpForm() {
                     required
                 />
                 <label>Password  :</label>
-                <input 
+                <input
                     id="password"
                     className="signup-input"
                     name="password"
