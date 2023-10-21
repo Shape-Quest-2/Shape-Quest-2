@@ -1,14 +1,30 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import '../sass/styles.css';
 
 function SignUpForm() {
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('')
+    const [formData, setFormData] = useState({
+        userName: '',
+        password: ''
+    });
 
-    const handleSubmit = (e) => {
+    // Handle input change
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prevState => ({ ...prevState, [name]: value }));
+    };
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        //login post (once we have server running)
-        console.log('Account successfully created', username, password);
+
+        const API_ENDPOINT = 'http://localhost:3000/SignUpForm';
+
+        try {
+            const response = await axios.post(API_ENDPOINT, formData);
+            console.log("Saved username succesfully into DB", response.data);
+        } catch (err) {
+            console.log('Error saving user', err);
+        }
     };
 
     return (
@@ -18,19 +34,22 @@ function SignUpForm() {
                 <input
                     className="signup-input"
                     id="username"
+                    name="userName"
                     type='text'
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
+                    value={formData.userName}
+                    onChange={handleInputChange}
                     placeholder='Create Username'
                     required
                 />
                 <label>Password  :</label>
-                <input id="password"
+                <input 
+                    id="password"
                     className="signup-input"
+                    name="password"
                     type="password"
-                    value={password}
+                    value={formData.password}
+                    onChange={handleInputChange}
                     placeholder='Create Password'
-                    onChange={(e) => setPassword(e.target.value)}
                     required
                 />
                 <button id="loginbutton" type="submit">Create account</button>
