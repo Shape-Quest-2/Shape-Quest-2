@@ -3,6 +3,21 @@ Hello there!!!!
 
 # Javacrypt
 
+
+DEPENDENCIES 
+
+npm init
+npm install node
+npm install react react-dom express
+npm install webpack webpack-cli webpack-dev-server --save-dev
+npm install babel-loader @babel/core @babel/preset-env @babel/preset-react --save-dev
+npm install sass-loader css-loader style-loader node-sass --save-dev
+npm install concurrently --save-dev
+npm install html-webpack-plugin --save-dev
+npm install url-loader --save-dev
+
+NEW DEPENDENCIES
+
 SET UP ENVIRONMENT & BACKEND
 
 [X]Sync Git branch and set initial commit
@@ -69,3 +84,8 @@ STRUCTURED DIRECTORY
 |-- webpack.config.js
 |-- .gitignore  (HIDDEN)    
 -------------------------------------------------------------
+
+
+RESOURCES
+
+3d Modeling - https://threejs.org/
