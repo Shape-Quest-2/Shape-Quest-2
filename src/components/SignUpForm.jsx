@@ -8,7 +8,7 @@ function SignUpForm() {
     const handleSubmit = (e) => {
         e.preventDefault();
         //login post (once we have server running)
-        console.log('Logging in with', username, password);
+        console.log('Account successfully created', username, password);
     };
 
     return (
