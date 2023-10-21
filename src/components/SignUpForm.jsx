@@ -4,7 +4,7 @@ import '../sass/styles.css';
 
 function SignUpForm() {
     const [formData, setFormData] = useState({
-        userName: '',
+        username: '',
         password: ''
     });
 
@@ -34,9 +34,9 @@ function SignUpForm() {
                 <input
                     className="signup-input"
                     id="username"
-                    name="userName"
+                    name="username"
                     type='text'
-                    value={formData.userName}
+                    value={formData.username}
                     onChange={handleInputChange}
                     placeholder='Create Username'
                     required
