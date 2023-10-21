@@ -6,10 +6,23 @@ function LoginForm() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
-    const handleSubmit = (e) => {
+    const loggedData = {
+        username,
+        password
+    }
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
         //signup post (once we have server running)
-        console.log('Login succesful:', username, password);
+        const API_ENDPOINT = 'http://localhost:3000/';
+
+        try {
+            const response = await axios.post(API_ENDPOINT, loggedData);
+            console.log('responding data =>', response)
+            console.log("Saved username succesfully into DB", response.data);
+        } catch (err) {
+            console.log('Error saving user', err);
+        }
     };
 
     return (

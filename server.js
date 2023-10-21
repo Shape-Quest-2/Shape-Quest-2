@@ -5,6 +5,7 @@ const cors = require('cors');
 const apiRoutes = require('./routes/api');
 const userController = require('./routes/userController');
 const userModel = require('./userModel')
+const bodyParser = require('body-parser');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -13,7 +14,7 @@ const PORT = process.env.PORT || 3000;
 
 mongoose.connect('mongodb+srv://shapequestuser:shapequest@cluster0.iecn0o7.mongodb.net/', { useNewUrlParser: true, useUnifiedTopology: true })
 
-//CORS middleware
+// CORS middleware
 app.use(cors({
     origin: 'http://localhost:8080',
     methods: ['GET', 'POST'],
@@ -29,13 +30,13 @@ db.once('open', () => {
 console.log('Connected to Database');
 });
 
-
+app.use(bodyParser.json());
 
 app.use(express.json())
 
-app.get('/', (req, res) => {
-    res.sendStatus(200)
-})
+// app.get('/', (req, res) => {
+//     res.sendStatus(200)
+// })
 
 app.use('/', apiRoutes)
 
