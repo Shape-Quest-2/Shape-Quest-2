@@ -149,8 +149,9 @@ body {
 
 #circle1 {
   margin-left: 3px;
-  width: 60px;
-  height: 60px;
+  margin-right: 3px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   background-color: white;
   border-color: black;
@@ -158,8 +159,10 @@ body {
 }
 
 #square1 {
-  width: 60px;
-  height: 60px;
+  margin-left: 3px;
+  margin-right: 3px;
+  width: 80px;
+  height: 80px;
   background-color: white;
   border-color: black;
   border: solid;
@@ -167,8 +170,9 @@ body {
 
 #rectangle1 {
   margin-left: 3px;
-  width: 90px;
-  height: 60px;
+  margin-right: 3px;
+  width: 120px;
+  height: 80px;
   background-color: white;
   border-color: black;
   border: solid;
@@ -176,8 +180,9 @@ body {
 
 #oval1 {
   margin-left: 3px;
-  width: 100px;
-  height: 60px;
+  margin-right: 3px;
+  width: 120px;
+  height: 80px;
   border-radius: 50%;
   background-color: white;
   border-color: black;
@@ -186,10 +191,10 @@ body {
 
 #diamond1 {
   margin-top: 5px;
-  margin-left: 10px;
-  margin-right: 5px;
-  width: 50px;
-  height: 50px;
+  margin-left: 20px;
+  margin-right:20px;
+  width: 80px;
+  height: 80px;
   background-color: white;
   transform: rotate(45deg);
   border-color: black;

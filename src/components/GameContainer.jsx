@@ -5,14 +5,15 @@ import GameBoard from './GameBoard';
 
 const GameContainer = () => {
     const [selectedShape, setSelectedShape] = useState(null);
+    const [selectedColor, setSelectedColor] = useState(null);
 
     return (
         <div className="game-container">
             {/* <GameHeader /> */}
             {/* <ToolBar />
             <GameBoard /> */}
-            <ToolBar setSelectedShape={setSelectedShape} />
-            <GameBoard selectedShape={selectedShape} />
+            <ToolBar setSelectedShape={setSelectedShape} setSelectedColor={setSelectedColor} />
+            <GameBoard selectedShape={selectedShape} selectedColor={selectedColor} />
         </div>
     );
 };

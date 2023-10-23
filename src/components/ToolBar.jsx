@@ -2,14 +2,13 @@ import React, { useState } from 'react';
 import ColorTools from './ColorTools';
 import ShapeTools from './ShapeTools';
 
-const ToolBar = ({ setSelectedShape }) => {
-    const [color, setColor] = useState('');
+const ToolBar = ({ setSelectedShape, setSelectedColor }) => {
 
     return (
         <div className="tool-bar">
-            <ColorTools setColor={setColor} />
+            <ColorTools setSelectedColor={setSelectedColor} />
             {/* <ShapeTools color={color} /> */}
-            <ShapeTools color={color} setSelectedShape={setSelectedShape} />
+            <ShapeTools setSelectedShape={setSelectedShape} />
         </div>
     );
 };
