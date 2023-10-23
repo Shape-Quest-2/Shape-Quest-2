@@ -6,9 +6,9 @@ const bcrypt = require ('bcrypt')
 
 
 
-userController.login = async (req, res, next) => {
+// userController.login = async (req, res, next) => {
 
-}
+// }
 
 userController.signUp = async (req, res, next) => {
     console.log(req.params)

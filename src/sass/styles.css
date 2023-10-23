@@ -6,6 +6,12 @@ div {
   flex-direction: column;
   background-color: lightblue;
 }
+
+body {
+  background-color: lightblue;
+  height: 100%;
+}
+
 #root {
   background-color: lightblue;
   width: fit;
@@ -67,9 +73,10 @@ div {
 
 .login-container {
   padding: 20px;
-  border: 1px solid #ccc;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 5px solid #000000;
+  box-shadow: 10px 4px 8px rgba(0, 0, 0, 0.5);
   max-width: 800px;
+  height: 95%;
   margin: 0 auto;
 }
 
@@ -77,6 +84,8 @@ div {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  font-weight: bold;
+  color: hsl(0, 0%, 0%);
 }
 
 .login-input {
@@ -88,9 +97,10 @@ div {
 
 .signup-container {
   padding: 20px;
-  border: 1px solid #ccc;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
+  border: 5px solid #000000;
+  box-shadow: 10px 4px 8px rgba(0, 0, 0, 0.5);
+  height: 95%;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -98,6 +108,7 @@ div {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  font-weight: bold;
 }
 
 .signup-input {

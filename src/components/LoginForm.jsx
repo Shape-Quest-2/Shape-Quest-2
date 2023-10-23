@@ -61,7 +61,10 @@ function LoginForm() {
                 />
                 <button id="loginbutton" type="submit">Log In</button>
             </form>
-            <Link to='SignUpForm'>Don't have an account? Sign up for one!</Link> {/* <-- Use Link component */}
+            <Link to='SignUpForm'>
+                Don't have an account?<br />
+                Sign up for one!
+            </Link>
         </div>
     );
 }
