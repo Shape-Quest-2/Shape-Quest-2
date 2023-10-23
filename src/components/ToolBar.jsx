@@ -1,6 +1,6 @@
 import React from 'react';
 import ColorTools from './ColorTools';
-import ShapeTools from './ShapeTools';
+//import ShapeTools from './ShapeTools';
 
 const ToolBar = () => {
     const [color, setColor] = useState('');
@@ -8,7 +8,7 @@ const ToolBar = () => {
     return (
         <div className="tool-bar">
             <ColorTools setColor={setColor} />
-            <ShapeTools color={color} />
+            {/* <ShapeTools color={color} /> */}
         </div>
     );
 };

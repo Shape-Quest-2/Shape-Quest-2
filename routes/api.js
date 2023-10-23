@@ -5,15 +5,15 @@ const userController = require('./userController')
 
 router.post('/SignUpForm', userController.signUp, (req, res) => {
     console.log('signedup!')
-    return res.redirect('/')
+    res.status(201).json({ message: "Signed in succesfully!", redirect: "/" });
     console.log('redirecting')
-
 })
 
 router.post('/', userController.login, (req, res) => {
     //redirect to home page
-    console.log('Login successful!')
-    res.redirect('/hi')
+    // console.log('Login successful!')
+    // res.redirect('/hi')
+    res.status(200).json({ message: "Login successful", redirect: "/GameContainer" })
 })
 
 

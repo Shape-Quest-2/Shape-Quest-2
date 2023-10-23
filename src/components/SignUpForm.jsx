@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import '../sass/styles.css';
 
@@ -54,6 +55,7 @@ function SignUpForm() {
                 />
                 <button id="loginbutton" type="submit">Create account</button>
             </form>
+            <Link to="/">Back To Login</Link>
         </div>
     )
 }

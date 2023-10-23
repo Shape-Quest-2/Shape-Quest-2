@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 function LoginForm() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [loggedIn, setLoggedIn] = useState(false);
+    const navigate = useNavigate();
 
     const loggedData = {
         username,
@@ -19,11 +21,21 @@ function LoginForm() {
         try {
             const response = await axios.post(API_ENDPOINT, loggedData);
             console.log('responding data =>', response)
-            console.log("Saved username succesfully into DB", response.data);
+            console.log("succesful login", response.data);
+
+            //navigate('/GameContainer');
+            setLoggedIn(true);
+
         } catch (err) {
-            console.log('Error saving user', err);
+            console.log('Error loggin user in', err);
         }
     };
+
+    useEffect(() => {
+        if (loggedIn) {
+            navigate('/GameContainer')
+        }
+    }, [loggedIn]);
 
     return (
         <div className="login-container">

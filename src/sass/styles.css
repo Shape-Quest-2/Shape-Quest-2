@@ -53,4 +53,36 @@ div {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.game-container {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 5px solid #ccc;
+  border-radius: 15px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+#blueButton {
+  background-color: blue;
+}
+
+#redButton {
+  background-color: red;
+}
+
+#yellowButton {
+  background-color: yellow;
+}
+
+#greenButton {
+  background-color: green;
+}
+
+#purpleButton {
+  background-color: purple;
+}
+
+#orangeButton {
+  background-color: orange;
+}
+
 /*# sourceMappingURL=styles.css.map */

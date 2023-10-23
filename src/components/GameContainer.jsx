@@ -6,7 +6,7 @@ import GameBoard from './GameBoard';
 const GameContainer = () => {
     return (
         <div className="game-container">
-            {/* <GameHeader /> */}
+            <GameHeader />
             {/* <ToolBar /> */}
             {/* <GameBoard /> */}
         </div>
