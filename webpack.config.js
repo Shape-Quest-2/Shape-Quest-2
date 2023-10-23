@@ -36,7 +36,8 @@ module.exports = {
                 test: /\.(png|jpg|gif|svg)$/,
                 use: [
                     {
-                        loader: 'url-loader',
+                        // loader: 'url-loader',
+                        loader: 'file-loader',
                         options: {
                             limit: 8192, // 8kb. Files smaller than this get inlined as base64
                             fallback: 'file-loader', // Use file-loader as a fallback for larger images

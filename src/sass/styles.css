@@ -2,13 +2,41 @@ div {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 80vh;
   flex-direction: column;
 }
 
+#app-header {
+  margin: 10;
+  font-family: cursive;
+  /* top: 20; */
+  /* padding: 20px; */
+  color: rgb(21, 97, 227);
+  -webkit-text-stroke: .25px #00d5ff;
+  text-shadow: 1px 1px 5px #2994b5, -1px -1px 5px #1384cf
+    /* position: fixed; */
+}
+
+#app-header:hover {
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
 #app-title {
-  margin: 0;
+  top: 20;
   text-align: center;
+  margin: 10px;
 }
 
 .login-container {
@@ -57,32 +85,129 @@ div {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border: 5px solid #ccc;
   border-radius: 15px;
-  max-width: 1600px;
+  height: 500px;
+  width: 1000px;
+  /* max-width: 1600px; */
   margin: 0 auto;
+  position: relative;
+}
+
+.tool-bar {
+  /* padding: 20px; */
+  width: 100%;
+  height: 50%;
+  /* border: 1px solid #ccc; */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* margin: 0 auto; */
+  top: 0;
+  right: 0;
+  position: absolute;
+
 }
 
 #blueButton {
   background-color: blue;
+  border-color: blue;
 }
 
 #redButton {
   background-color: red;
+  border-color: red;
 }
 
 #yellowButton {
   background-color: yellow;
+  border-color: yellow;
 }
 
 #greenButton {
   background-color: green;
+  border-color: green;
 }
 
 #purpleButton {
   background-color: purple;
+  border-color: purple;
 }
 
 #orangeButton {
   background-color: orange;
+  border-color: orange;
 }
 
 /*# sourceMappingURL=styles.css.map */
+
+.colorbuttons {
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+
+}
+
+#shapes {
+  width: fit;
+  height: 50%;
+  width: 50%;
+  top: 0;
+  right: 0;
+  position: absolute;
+}
+
+#colors {
+  width: 50%;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#square {
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  border-color: black;
+
+}
+
+#circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: white;
+
+
+}
+
+#rectangle {
+  width: 90px;
+  height: 60px;
+  background-color: white;
+  border-color: black;
+  border-style: black;
+}
+
+#triangle {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 60px solid black;
+  background-color: transparent;
+}
+
+#oval {
+  width: 100px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+#diamond {
+  margin-left: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  transform: rotate(45deg);
+
+
+}
