@@ -4,16 +4,23 @@ div {
   align-items: center;
   height: 98vh;
   flex-direction: column;
-  background-color: lightblue;
+  background-color: ;
 }
 
 body {
-  background-color: lightblue;
+  background-color: rgb(106, 211, 246);
   height: 100%;
+  animation: colorChange 3s linear infinite;
+}
+
+#app-tagline {
+  font-size: 30px;
 }
 
 #root {
-  background-color: lightblue;
+  background-color: lightyellow;
+  background: rgb(34, 193, 195);
+  background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
   width: fit;
   height: fit;
 }
@@ -67,7 +74,7 @@ body {
 #app-title {
   top: 20;
   text-align: center;
-  margin: 10px;
+  margin: 3px;
   font-size: 80px;
 }
 
@@ -121,10 +128,10 @@ body {
 .game-container {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border: 7px solid #e00b0b;
+  animation: colorChange 20s linear infinite;
   border-radius: 15px;
   height: 500px;
   width: 1000px;
-  /* max-width: 1600px; */
   margin: 0 auto;
   position: relative;
 }
@@ -192,7 +199,7 @@ body {
 #diamond1 {
   margin-top: 5px;
   margin-left: 20px;
-  margin-right:20px;
+  margin-right: 20px;
   width: 80px;
   height: 80px;
   background-color: white;
@@ -204,6 +211,7 @@ body {
 .tool-bar {
   display: flex;
   /* padding: 20px; */
+  background-color: rgb(189, 189, 189);
   width: 100%;
   height: 15%;
   /* border: 1px solid #ccc; */
@@ -212,8 +220,6 @@ body {
   top: 0;
   right: 0;
   position: absolute;
-  background-color: white;
-
 }
 
 #blueButton {
@@ -321,8 +327,7 @@ body {
   height: 50px;
   background-color: white;
   transform: rotate(45deg);
-
-
+  font-size: 8px;
 }
 
 .game-board {
@@ -330,4 +335,26 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   background-color: white;
+}
+
+@keyframes colorChange {
+  0% {
+    background-color: red;
+  }
+
+  25% {
+    background-color: blue;
+  }
+
+  50% {
+    background-color: green;
+  }
+
+  75% {
+    background-color: yellow;
+  }
+
+  100% {
+    background-color: red;
+  }
 }

@@ -22,7 +22,7 @@ import '/src/sass/styles.css';
 
 const GameBoard = ({ selectedShape, selectedColor }) => {
     const [shapes, setShapes] = useState([]);
-    const [color, setColor] = useState('white');
+    const [color, setColor] = useState('White');
 
     // Whenever selectedShape changes, add it to shapes list
     React.useEffect(() => {
