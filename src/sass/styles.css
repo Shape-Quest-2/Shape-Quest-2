@@ -1,0 +1,360 @@
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 98vh;
+  flex-direction: column;
+  background-color: ;
+}
+
+body {
+  background-color: rgb(106, 211, 246);
+  height: 100%;
+  animation: colorChange 3s linear infinite;
+}
+
+#app-tagline {
+  font-size: 30px;
+}
+
+#root {
+  background-color: lightyellow;
+  background: rgb(34, 193, 195);
+  background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+  width: fit;
+  height: fit;
+}
+
+#app-header {
+  margin: 10;
+  font-family: cursive;
+  /* top: 20; */
+  /* padding: 20px; */
+
+  color: rgb(21, 97, 227);
+  -webkit-text-stroke: .25px #29ace5;
+  text-shadow: 1px 1px 5px #060707, -1px -1px 5px #090a0a
+    /* position: fixed; */
+}
+
+#app-header:hover {
+  animation: bounce 1s infinite;
+}
+
+.shapebuttons:hover {
+  animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    /* border-color: white; */
+    background-color: #ebeded;
+    box-shadow: 0 0 5px rgba(253, 254, 255, 0.8);
+  }
+
+  100% {
+    /* border-color: #060707; */
+    background-color: #c8c6cb;
+    box-shadow: 0 0 20px rgb(205, 205, 207);
+  }
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+#app-title {
+  top: 20;
+  text-align: center;
+  margin: 3px;
+  font-size: 80px;
+}
+
+.login-container {
+  padding: 20px;
+  border: 5px solid #000000;
+  box-shadow: 10px 4px 8px rgba(0, 0, 0, 0.5);
+  max-width: 800px;
+  height: 95%;
+  margin: 0 auto;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-weight: bold;
+  color: hsl(0, 0%, 0%);
+}
+
+.login-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.signup-container {
+  padding: 20px;
+  border: 5px solid #000000;
+  box-shadow: 10px 4px 8px rgba(0, 0, 0, 0.5);
+  height: 95%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.signup-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.game-container {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 7px solid #e00b0b;
+  animation: colorChange 20s linear infinite;
+  border-radius: 15px;
+  height: 500px;
+  width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.game-board {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 3px solid #e00b0b;
+  border-radius: 15px;
+  margin-top: 100px;
+  position: relative;
+  height: 400px;
+  width: 1000px;
+
+  /* #circle {
+    margin-left: 3px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+  } */
+}
+
+#circle1 {
+  margin-left: 3px;
+  margin-right: 3px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: white;
+  border-color: black;
+  border: solid;
+}
+
+#square1 {
+  margin-left: 3px;
+  margin-right: 3px;
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border-color: black;
+  border: solid;
+}
+
+#rectangle1 {
+  margin-left: 3px;
+  margin-right: 3px;
+  width: 120px;
+  height: 80px;
+  background-color: white;
+  border-color: black;
+  border: solid;
+}
+
+#oval1 {
+  margin-left: 3px;
+  margin-right: 3px;
+  width: 120px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: white;
+  border-color: black;
+  border: solid;
+}
+
+#diamond1 {
+  margin-top: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  transform: rotate(45deg);
+  border-color: black;
+  border: solid;
+}
+
+.tool-bar {
+  display: flex;
+  /* padding: 20px; */
+  background-color: rgb(189, 189, 189);
+  width: 100%;
+  height: 15%;
+  /* border: 1px solid #ccc; */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* margin: 0 auto; */
+  top: 0;
+  right: 0;
+  position: absolute;
+}
+
+#blueButton {
+  background-color: blue;
+  border-color: cyan;
+}
+
+#redButton {
+  background-color: red;
+  border-color: red;
+}
+
+#yellowButton {
+  background-color: yellow;
+  border-color: yellow;
+}
+
+#greenButton {
+  background-color: green;
+  border-color: greenyellow;
+}
+
+#purpleButton {
+  background-color: purple;
+  border-color: paleturquoise;
+}
+
+#orangeButton {
+  background-color: orange;
+  border-color: orange;
+}
+
+/*# sourceMappingURL=styles.css.map */
+
+.colorbuttons {
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  margin: 5px;
+
+}
+
+#shapes {
+  display: flex;
+  justify-content: flex-end;
+
+  width: fit;
+  height: 50%;
+  width: 50%;
+  top: 0;
+  right: 0;
+  position: absolute;
+  margin: 5px;
+
+}
+
+#colors {
+  width: 50%;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#square {
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  border-color: black;
+
+}
+
+#circle {
+  margin-left: 3px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: white;
+
+
+}
+
+#rectangle {
+  margin-left: 3px;
+  width: 90px;
+  height: 60px;
+  background-color: white;
+  border-color: black;
+  border-style: black;
+}
+
+#oval {
+  margin-left: 3px;
+  width: 100px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+#diamond {
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-right: 5px;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  transform: rotate(45deg);
+  font-size: 8px;
+}
+
+.game-board {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: white;
+}
+
+@keyframes colorChange {
+  0% {
+    background-color: red;
+  }
+
+  25% {
+    background-color: blue;
+  }
+
+  50% {
+    background-color: green;
+  }
+
+  75% {
+    background-color: yellow;
+  }
+
+  100% {
+    background-color: red;
+  }
+}
