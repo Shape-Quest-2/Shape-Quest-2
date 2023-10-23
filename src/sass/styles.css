@@ -2,8 +2,14 @@ div {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  height: 98vh;
   flex-direction: column;
+  background-color: lightblue;
+}
+#root {
+  background-color: lightblue;
+  width: fit;
+  height: fit;
 }
 
 #app-header {
@@ -116,10 +122,67 @@ div {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border: 3px solid #e00b0b;
   border-radius: 15px;
-  margin-top: 80px;
+  margin-top: 100px;
   position: relative;
-  height: 800px;
+  height: 400px;
   width: 1000px;
+
+  /* #circle {
+    margin-left: 3px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+  } */
+}
+
+#circle1 {
+  margin-left: 3px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: white;
+  border-color: black;
+  border: solid;
+}
+
+#square1 {
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  border-color: black;
+  border: solid;
+}
+
+#rectangle1 {
+  margin-left: 3px;
+  width: 90px;
+  height: 60px;
+  background-color: white;
+  border-color: black;
+  border: solid;
+}
+
+#oval1 {
+  margin-left: 3px;
+  width: 100px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: white;
+  border-color: black;
+  border: solid;
+}
+
+#diamond1 {
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-right: 5px;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  transform: rotate(45deg);
+  border-color: black;
+  border: solid;
 }
 
 .tool-bar {
@@ -133,6 +196,7 @@ div {
   top: 0;
   right: 0;
   position: absolute;
+  background-color: white;
 
 }
 
@@ -243,4 +307,11 @@ div {
   transform: rotate(45deg);
 
 
+}
+
+.game-board {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: white;
 }

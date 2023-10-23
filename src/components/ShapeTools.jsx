@@ -18,7 +18,7 @@ function ShapeTools({ setSelectedShape }) {
 
     return (
         <section id='shapes'>
-            <button className='shapebuttons' id='square' onClick={() => setSelectedShape(square)}></button>
+            <button className='shapebuttons' id='square' onClick={() => setSelectedShape('square')}></button>
             <button className='shapebuttons' id='circle' onClick={() => setSelectedShape('circle')}></button>
             <button className='shapebuttons' id='rectangle' onClick={() => setSelectedShape('rectangle')}></button>
             {/* <button className='shapebuttons' id='triangle' onClick={() => setSelectedShape('triangle')}></button> */}
