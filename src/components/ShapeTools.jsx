@@ -21,7 +21,7 @@ function ShapeTools({ setSelectedShape }) {
             <button className='shapebuttons' id='square' onClick={() => setSelectedShape('square')}>Square</button>
             <button className='shapebuttons' id='circle' onClick={() => setSelectedShape('circle')}>Circle</button>
             <button className='shapebuttons' id='rectangle' onClick={() => setSelectedShape('rectangle')}>Rectangle</button>
-            {/* <button className='shapebuttons' id='triangle' onClick={() => setSelectedShape('triangle')}></button> */}
+            <button className='shapebuttons' id='triangle' onClick={() => setSelectedShape('triangle')}></button>
             <button className='shapebuttons' id='oval' onClick={() => setSelectedShape('oval')}>Oval</button>
             <button className='shapebuttons' id='diamond' onClick={() => setSelectedShape('diamond')}>Diamond</button>
         </section>

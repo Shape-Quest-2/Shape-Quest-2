@@ -33,7 +33,7 @@ db.once('open', () => {
     console.log('Connected to Database');
 });
 
-app.use(bodyParser.json());
+// app.use(bodyParser.json());
 
 app.use(express.json())
 
@@ -45,6 +45,7 @@ app.use('/', apiRoutes)
 
 //unknown route handler
 app.use((req, res) => {
+    // console.log('req', req)
     console.log('Invalid page')
     res.status(400)
 })

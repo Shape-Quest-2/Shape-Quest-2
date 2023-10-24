@@ -226,7 +226,6 @@ body {
   background-color: blue;
   border-color: cyan;
 }
-
 #redButton {
   background-color: red;
   border-color: red;
@@ -239,17 +238,16 @@ body {
 
 #greenButton {
   background-color: green;
-  border-color: greenyellow;
-}
-
-#purpleButton {
-  background-color: purple;
-  border-color: paleturquoise;
+  border-color: green;
 }
 
 #orangeButton {
   background-color: orange;
   border-color: orange;
+}
+#purpleButton {
+  background-color: purple;
+  border-color: purple;
 }
 
 /*# sourceMappingURL=styles.css.map */
@@ -300,6 +298,16 @@ body {
   background-color: white;
 
 
+
+}
+
+#triangle {
+  width: 50px;
+  height: 50px;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid;
+  background-color: transparent;
 }
 
 #rectangle {
