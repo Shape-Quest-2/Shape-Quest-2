@@ -29,9 +29,9 @@ db.on('error', (err) => {
     console.log('Error connecting to db')
 })
 
-db.once('open', () => {
-    console.log('Connected to Database');
-});
+// db.once('open', () => {
+//     console.log('Connected to Database');
+// });
 
 // app.use(bodyParser.json());
 
@@ -50,4 +50,5 @@ app.use((req, res) => {
     res.status(400)
 })
 
-app.listen(PORT, () => console.log(`Listening on PORT: ${PORT}`));
+ app.listen(PORT, () => console.log(`Listening on PORT: ${PORT}`));
+
