@@ -43,7 +43,7 @@ app.use(express.json())
 
 app.use('/', apiRoutes)
 
-//unknown route handler
+// Handle requests for any route we haven't defined
 app.use((req, res) => {
     console.log(`[${new Date().toUTCString()}] INFO: Client attempted to access unknown resource at ${req.originalUrl}. Returning 404.`);
     return res.status(404);
