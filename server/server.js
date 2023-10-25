@@ -10,8 +10,6 @@ const bodyParser = require('body-parser');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-
-
 mongoose.connect('mongodb+srv://shapequestuser:shapequest@cluster0.iecn0o7.mongodb.net/', { useNewUrlParser: true, useUnifiedTopology: true })
 
 //serve static files
@@ -33,15 +31,9 @@ db.once('open', () => {
     console.log('Connected to Database');
 });
 
-// app.use(bodyParser.json());
+app.use(express.json());
 
-app.use(express.json())
-
-// app.get('/', (req, res) => {
-//     res.sendStatus(200)
-// })
-
-app.use('/', apiRoutes)
+app.use('/', apiRoutes);
 
 // Handle requests for any route we haven't defined
 app.use((req, res) => {
