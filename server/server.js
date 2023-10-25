@@ -19,14 +19,10 @@ app.use(cors({
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
-const db = mongoose.connection
-db.on('error', (err) => {
-    console.log('Error connecting to db');
-});
-
-db.once('open', () => {
-    console.log('Connected to Database');
-});
+// Set up connection to the database
+const db = mongoose.connection;
+db.on('error', (err) => console.log(`Error connecting to db: ${err}`));
+db.once('open', () => console.log('Connected to Database'));
 
 app.use(express.json());
 
