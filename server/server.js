@@ -35,6 +35,13 @@ app.use(express.json());
 // serve static files
 app.use(express.static(path.join(__dirname, '../dist')));
 
+app.get('/', (req, res) => {
+  return res.status(200).sendFile('/index.html');
+});
+
+// serve API routes
+app.use('/api', apiRoutes);
+
 // Handle requests for any route we haven't defined
 app.use((req, res) => {
   console.log(`[${new Date().toUTCString()}] INFO: Client attempted to access unknown resource at ${req.originalUrl}. Returning 404.`);
