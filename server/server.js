@@ -18,9 +18,9 @@ app.use(express.static(path.join(__dirname, 'assets')));
 
 // CORS middleware
 app.use(cors({
-    origin: 'http://localhost:8080',
-    methods: ['GET', 'POST'],
-    allowedHeaders: ['Content-Type', 'Authorization']
+  origin: 'http://localhost:8080',
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
 // Set up connection to the database
@@ -39,8 +39,8 @@ app.use('/', apiRoutes);
 
 // Handle requests for any route we haven't defined
 app.use((req, res) => {
-    console.log(`[${new Date().toUTCString()}] INFO: Client attempted to access unknown resource at ${req.originalUrl}. Returning 404.`);
-    return res.status(404);
+  console.log(`[${new Date().toUTCString()}] INFO: Client attempted to access unknown resource at ${req.originalUrl}. Returning 404.`);
+  return res.status(404);
 });
 
 app.listen(PORT, () => console.log(`Listening on PORT: ${PORT}`));
