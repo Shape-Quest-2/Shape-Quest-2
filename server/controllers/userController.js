@@ -1,7 +1,7 @@
 //const User = require('../server')
 const userController = {};
 const mongoose = require('mongoose');
-const User = require('../userModel')
+const User = require('../models/userModel');
 const bcrypt = require ('bcrypt')
 
 
@@ -60,9 +60,5 @@ userController.login = async (req, res, next) => {
     res.status(500).json({ message: 'Server side error during login' });
   }
 }
-    
-
-
-
 
 module.exports = userController
