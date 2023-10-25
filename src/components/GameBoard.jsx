@@ -1,45 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import '/src/sass/styles.css';
 
-const GameBoard = ({ shapes, handleSubmitShape }) => {
-  // Whenever selectedShape changes, add it to shapes list
-  //   useEffect(() => {
-  //     if (selectedShape) {
-  //       setShapes(prevShapes => [...prevShapes, { shape: selectedShape }]);
-  //     }
-  //   }, [selectedShape]);
-
-  //   useEffect(() => {
-  //     if (selectedColor) {
-  //       setColor(prevColors => [...prevColors, { color: selectedColor }]);
-  //     }
-  //   }, [selectedColor]);
-  const [renderShapes, setRenderShapes] = useState([]);
-  useEffect(() => {
-    const renderShapes = shapes.map((element, index) => (
-      <div
-        style={{ backgroundColor: element.color }}
-        id={`${element.shape}1`}
-        key={index}>
-        {element.shape}
-      </div>
-    ));
-    setRenderShapes(renderShapes);
-  }, [shapes]);
-
-  return (
-    <div className='game-board'>
-      {renderShapes}
-      <div>
-        <button
-          className='shapebuttons'
-          id='circle'
-          onClick={() => handleSubmitShape}>
-          submit
-        </button>
-      </div>
+const GameBoard = ({ shapes, handleChangeExistingShapeColor }) => {
+  const renderShapes = shapes.map((element, index) => (
+    <div
+      onClick={e => {
+        handleChangeExistingShapeColor(e.target.dataset.id);
+      }}
+      style={{ backgroundColor: element.color }}
+      id={`${element.shape}1`}
+      data-id={index}
+      key={index}>
+      {element.shape}
     </div>
-  );
+  ));
+
+  return <div className='game-board'>{renderShapes}</div>;
 };
 
 export default GameBoard;

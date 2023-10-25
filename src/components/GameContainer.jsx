@@ -6,19 +6,21 @@ import { useEffect } from 'react';
 
 const GameContainer = () => {
   const [selectedShape, setSelectedShape] = useState(null);
-  const [selectedColor, setSelectedColor] = useState(null);
+  const [selectedColor, setSelectedColor] = useState('White');
   const [shapes, setShapes] = useState([]);
-  const [color, setColor] = useState('White');
 
-  const handleSubmitShape = () => {
-    useEffect(() => {
-      if (selectedShape && selectedColor) {
-        setShapes(prevShapes => [
-          ...prevShapes,
-          { shape: selectedShape, color: selectedColor },
-        ]);
+  const handleSubmitShape = shape => {
+    setShapes([...shapes, { shape: shape, color: selectedColor }]);
+  };
+  const handleChangeExistingShapeColor = id => {
+    const newShapes = [];
+    for (let i = 0; i < shapes.length; i++) {
+      if (Number(id) === i) {
+        shapes[i].color = selectedColor;
       }
-    });
+      newShapes.push(shapes[i]);
+    }
+    setShapes(newShapes);
   };
 
   return (
@@ -26,15 +28,11 @@ const GameContainer = () => {
       <ToolBar
         setSelectedShape={setSelectedShape}
         setSelectedColor={setSelectedColor}
+        handleSubmitShape={handleSubmitShape}
       />
       <GameBoard
-        handleSubmitShape={handleSubmitShape}
-        selectedShape={selectedShape}
-        selectedColor={selectedColor}
         shapes={shapes}
-        setShapes={setShapes}
-        color={color}
-        setColor={setColor}
+        handleChangeExistingShapeColor={handleChangeExistingShapeColor}
       />
     </div>
   );

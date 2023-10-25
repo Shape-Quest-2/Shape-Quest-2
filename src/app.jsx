@@ -17,9 +17,9 @@ function App() {
       </div>
       <div>
         <Routes>
-          <Route path='/' element={<LoginForm />} />
+          {/* <Route path='/' element={<LoginForm />} /> */}
           <Route path='/SignUpForm' element={<SignUpForm />} />
-          <Route path='/GameContainer' element={<GameContainer />} />
+          <Route path='/' element={<GameContainer />} />
         </Routes>
       </div>
     </Router>
