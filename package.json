@@ -48,6 +48,7 @@
   "main": "server/server.js",
   "scripts": {
     "build": "NODE_ENV=production webpack",
+    "clean": "rm -rfv ./dist",
     "dev": "NODE_ENV=development concurrently \"nodemon server/server.js\" \"webpack-dev-server --open --mode development\"",
     "test": "jest"
   },
