@@ -15,7 +15,7 @@ describe('ToolBar Component', () => {
       const { getByText } = render(
         <ToolBar setSelectedShape={shapeMockFunction} setSelectedColor={colorMockFunction} />
       );
-  
+
       const squareButton = getByText('Square');
       fireEvent.click(squareButton);
   
