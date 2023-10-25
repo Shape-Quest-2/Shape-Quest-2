@@ -1,18 +1,17 @@
-const path = require('path');
+// package imports
+const cors = require('cors');
 const express = require('express');
 const mongoose = require('mongoose');
-const cors = require('cors');
-const apiRoutes = require('./routes/api');
-const userController = require('./controllers/userController');
-const userModel = require('./models/userModel')
-const bodyParser = require('body-parser');
+const path = require('path');
 
+// local imports
+const apiRoutes = require('./routes/api');
+
+
+// server config / baseline middleware setup
+// -----------------------------------------
 const app = express();
 const PORT = process.env.PORT || 3000;
-
-
-
-mongoose.connect('mongodb+srv://shapequestuser:shapequest@cluster0.iecn0o7.mongodb.net/', { useNewUrlParser: true, useUnifiedTopology: true })
 
 //serve static files
 app.use(express.static(path.join(__dirname, 'assets')));
@@ -24,30 +23,24 @@ app.use(cors({
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
-const db = mongoose.connection
-db.on('error', (err) => {
-    console.log('Error connecting to db')
-})
+// Set up connection to the database
+mongoose.connect('mongodb+srv://shapequestuser:shapequest@cluster0.iecn0o7.mongodb.net/', { useNewUrlParser: true, useUnifiedTopology: true })
+const db = mongoose.connection;
+db.on('error', (err) => console.log(`Error connecting to db: ${err}`));
+db.once('open', ()   => console.log('Connected to Database'));
 
-db.once('open', () => {
-    console.log('Connected to Database');
-});
+// parse incoming JSON POST bodies
+app.use(express.json());
 
-// app.use(bodyParser.json());
 
-app.use(express.json())
+// Shape Quest API routing
+// -----------------------
+app.use('/', apiRoutes);
 
-// app.get('/', (req, res) => {
-//     res.sendStatus(200)
-// })
-
-app.use('/', apiRoutes)
-
-//unknown route handler
+// Handle requests for any route we haven't defined
 app.use((req, res) => {
-    // console.log('req', req)
-    console.log('Invalid page')
-    res.status(400)
-})
+    console.log(`[${new Date().toUTCString()}] INFO: Client attempted to access unknown resource at ${req.originalUrl}. Returning 404.`);
+    return res.status(404);
+});
 
 app.listen(PORT, () => console.log(`Listening on PORT: ${PORT}`));
