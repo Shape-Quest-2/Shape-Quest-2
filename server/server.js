@@ -1,13 +1,17 @@
-const path = require('path');
+// package imports
+const cors = require('cors');
 const express = require('express');
 const mongoose = require('mongoose');
-const cors = require('cors');
+const path = require('path');
+
+// local imports
 const apiRoutes = require('./routes/api');
 
+
+// server config / baseline middleware setup
+// -----------------------------------------
 const app = express();
 const PORT = process.env.PORT || 3000;
-
-mongoose.connect('mongodb+srv://shapequestuser:shapequest@cluster0.iecn0o7.mongodb.net/', { useNewUrlParser: true, useUnifiedTopology: true })
 
 //serve static files
 app.use(express.static(path.join(__dirname, 'assets')));
@@ -20,12 +24,17 @@ app.use(cors({
 }));
 
 // Set up connection to the database
+mongoose.connect('mongodb+srv://shapequestuser:shapequest@cluster0.iecn0o7.mongodb.net/', { useNewUrlParser: true, useUnifiedTopology: true })
 const db = mongoose.connection;
 db.on('error', (err) => console.log(`Error connecting to db: ${err}`));
-db.once('open', () => console.log('Connected to Database'));
+db.once('open', ()   => console.log('Connected to Database'));
 
+// parse incoming JSON POST bodies
 app.use(express.json());
 
+
+// Shape Quest API routing
+// -----------------------
 app.use('/', apiRoutes);
 
 // Handle requests for any route we haven't defined
