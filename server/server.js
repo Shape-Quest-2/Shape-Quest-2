@@ -13,9 +13,6 @@ const apiRoutes = require('./routes/api');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-//serve static files
-app.use(express.static(path.join(__dirname, 'assets')));
-
 // CORS middleware
 app.use(cors({
   origin: 'http://localhost:8080',
@@ -35,7 +32,8 @@ app.use(express.json());
 
 // Shape Quest API routing
 // -----------------------
-app.use('/', apiRoutes);
+// serve static files
+app.use(express.static(path.join(__dirname, '../dist')));
 
 // Handle requests for any route we haven't defined
 app.use((req, res) => {
