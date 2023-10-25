@@ -45,9 +45,8 @@ app.use('/', apiRoutes)
 
 //unknown route handler
 app.use((req, res) => {
-    // console.log('req', req)
-    console.log('Invalid page')
-    res.status(400)
-})
+    console.log(`[${new Date().toUTCString()}] INFO: Client attempted to access unknown resource at ${req.originalUrl}. Returning 404.`);
+    return res.status(404);
+});
 
 app.listen(PORT, () => console.log(`Listening on PORT: ${PORT}`));
