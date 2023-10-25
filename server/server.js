@@ -3,9 +3,6 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const apiRoutes = require('./routes/api');
-const userController = require('./controllers/userController');
-const userModel = require('./models/userModel')
-const bodyParser = require('body-parser');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -24,8 +21,8 @@ app.use(cors({
 
 const db = mongoose.connection
 db.on('error', (err) => {
-    console.log('Error connecting to db')
-})
+    console.log('Error connecting to db');
+});
 
 db.once('open', () => {
     console.log('Connected to Database');
