@@ -1,93 +1,93 @@
 div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  flex-direction: column;
 }
 
 #app-title {
-    margin: 0;
-    text-align: center;
+  margin: 0;
+  text-align: center;
 }
 
 .login-container {
-    padding: 20px;
-    border: 1px solid #ccc;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); //apply box shadow
-    max-width: 800px;
-    margin: 0 auto; //center form on page
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); //apply box shadow
+  max-width: 800px;
+  margin: 0 auto; //center form on page
 }
 
 .login-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px; //spacing
+  display: flex;
+  flex-direction: column;
+  gap: 10px; //spacing
 }
 
 .login-input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px; //rounded corners
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); //apply box shadow
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px; //rounded corners
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); //apply box shadow
 }
 
 .signup-container {
-    padding: 20px;
-    border: 1px solid #ccc;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); //apply box shadow
-    max-width: 400px;
-    margin: 0 auto; //center form on page
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); //apply box shadow
+  max-width: 400px;
+  margin: 0 auto; //center form on page
 }
 
 .signup-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px; //spacing
+  display: flex;
+  flex-direction: column;
+  gap: 10px; //spacing
 }
 
 .signup-input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px; //rounded corners
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); //apply box shadow
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px; //rounded corners
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); //apply box shadow
 }
 
 .game-container {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 5px solid #ccc;
-    border-radius: 15px;
-    max-width: 1600px;
-    margin: 0 auto; //center container
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 5px solid #ccc;
+  border-radius: 15px;
+  max-width: 1600px;
+  margin: 0 auto; //center container
 }
 
 .tool-bar {
-    // padding: 20px;
-    border: 1px solid #ccc;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    // margin: 0 auto;
+  // padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  // margin: 0 auto;
 }
 
 #blueButton {
-    background-color: blue;
+  background-color: blue;
 }
 
 #redButton {
-    background-color: red;
+  background-color: red;
 }
 
 #yellowButton {
-    background-color: yellow;
+  background-color: yellow;
 }
 
 #greenButton {
-    background-color: green;
+  background-color: green;
 }
 
 #purpleButton {
-    background-color: purple;
+  background-color: purple;
 }
 
 #orangeButton {
-    background-color: orange;
+  background-color: orange;
 }
