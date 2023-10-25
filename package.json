@@ -9,7 +9,9 @@
     "nodemon": "^3.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.17.0"
+    "react-router-dom": "^6.17.0",
+    "text-encoding": "^0.7.0",
+    "util.promisify": "^1.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.23.2",
@@ -63,6 +65,8 @@
   },
   "homepage": "https://github.com/Shape-Quest/Shape-Quest#reame",
   "jest": {
-    "testEnvironment": "jest-environment-jsdom"
+    "testEnvironment": "node",
+    "setupFiles": ["<rootDir>/jest.setup.js"]
+
   }
 }

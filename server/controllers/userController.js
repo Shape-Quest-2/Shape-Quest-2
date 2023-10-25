@@ -1,4 +1,4 @@
-//const User = require('../server')
+// const User = require('../server')
 const userController = {};
 const mongoose = require('mongoose');
 const User = require('../models/userModel');
@@ -16,10 +16,10 @@ userController.signUp = async (req, res, next) => {
         return next(err)
       }
       const newUser = new User({ username, password: hash });
-      console.log('encrypted password = ', hash)
+      // console.log('encrypted password = ', hash)
       try {
         await newUser.save()
-        console.log('New user Created', { username, password });
+        // console.log('New user Created', { username, password });
         res.locals.newUser = newUser;
     
       } catch (saveError) {

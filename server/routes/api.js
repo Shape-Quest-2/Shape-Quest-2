@@ -7,9 +7,9 @@ const userController = require('../controllers/userController');
 // })
 
 router.post('/SignUpForm', userController.signUp, (req, res) => {
-  console.log('signedup!')
-  res.status(201).json({ message: 'Signed in succesfully!', redirect: '/' });
-  console.log('redirecting')
+  // console.log('signedup!')
+  res.status(200).json({ message: 'Signed in succesfully!', redirect: '/' });
+  // console.log('redirecting')
 })
 
 router.post('/', userController.login, (req, res) => {
