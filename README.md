@@ -2,7 +2,7 @@
 ## Welcome to Shape Quest 2!
 Shape Quest is an engaging and educational game designed for kids to have fun while learning about shapes and colors. Let's embark on a colorful adventure and discover the features that make this game exciting!
 
-![Hi](https://imgur.com/a/LwinDtq)
+![](https://i.imgur.com/UfWpcUE.gif)
 
 ## Features
 Placing Shapes
