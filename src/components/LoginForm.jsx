@@ -13,14 +13,12 @@ function LoginForm() {
     username,
     password,
   };
-
+  
   const handleSubmit = async e => {
     e.preventDefault();
     //signup post (once we have server running)
-    const API_ENDPOINT = 'http://localhost:3000/';
-
     try {
-      const response = await axios.post(API_ENDPOINT, loggedData);
+      const response = await axios.post('/api/login', loggedData);
       console.log('responding data =>', response);
       console.log('succesful login', response.data);
 
@@ -34,7 +32,7 @@ function LoginForm() {
       //     setLoginError(response.data.message || "Login Failed. Please try again");
       // }
     } catch (err) {
-      console.log('Error loggin user in', err);
+      console.log('Error logging user in', err);
     }
   };
 
