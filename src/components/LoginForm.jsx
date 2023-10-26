@@ -12,21 +12,13 @@ function LoginForm() {
     username,
     password,
   };
-  
+
   const handleSubmit = async e => {
     e.preventDefault();
-    //signup post (once we have server running)
     try {
       const response = await axios.post('/api/login', loggedData);
-      
-      setLoggedIn(true);
 
-      // if (response.data.success) {
-      //     console.log("Successful login", response.data);
-      //     setLoggedIn(true);
-      // } else {
-      //     setLoginError(response.data.message || "Login Failed. Please try again");
-      // }
+      setLoggedIn(true);
     } catch (err) {
       console.log('Error logging user in', err);
     }

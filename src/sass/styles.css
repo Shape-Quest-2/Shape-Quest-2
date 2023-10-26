@@ -146,25 +146,18 @@ body {
   position: relative;
   height: 400px;
   width: 1000px;
-
-  /* #circle {
-    margin-left: 3px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: white;
-  } */
 }
-
-.circle1 {
-  margin-left: 3px;
-  margin-right: 3px;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background-color: white;
-  border-color: black;
-  border: solid;
+.trash {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 3px solid black;
+  border-radius: 15px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  position: relative;
+  height: 100px;
+  width: 100px;
+  background-color: #060707;
+  color: #c8c6cb;
 }
 
 .square1 {
@@ -191,6 +184,16 @@ body {
   margin-left: 3px;
   margin-right: 3px;
   width: 120px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: white;
+  border-color: black;
+  border: solid;
+}
+.circle1 {
+  margin-left: 3px;
+  margin-right: 3px;
+  width: 80px;
   height: 80px;
   border-radius: 50%;
   background-color: white;

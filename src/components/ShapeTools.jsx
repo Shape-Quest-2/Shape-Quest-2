@@ -29,14 +29,6 @@ function ShapeTools({ handleSubmitShape }) {
       </button>
       <button
         className='shapebuttons'
-        id='triangle'
-        onClick={e => {
-          handleSubmitShape(e.target.innerHTML.toLowerCase());
-        }}>
-        triangle
-      </button>
-      <button
-        className='shapebuttons'
         id='oval'
         onClick={e => {
           handleSubmitShape(e.target.innerHTML.toLowerCase());

@@ -5,7 +5,7 @@ import Shape from './Shape';
 
 const GameBoard = ({ shapes, handleChangeExistingShapeColor }) => {
   const { isOver, setNodeRef } = useDroppable({
-    id: 'droppable',
+    id: 'game-board',
   });
   const style = {
     color: isOver ? 'green' : undefined,

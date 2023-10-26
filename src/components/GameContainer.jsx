@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ToolBar from './ToolBar';
 import GameBoard from './GameBoard';
+import Trash from './Trash';
 import { DndContext } from '@dnd-kit/core';
 
 const GameContainer = () => {
@@ -30,24 +31,35 @@ const GameContainer = () => {
     setShapes(newShapes);
   };
   const handleDragEnd = e => {
-    const shape = shapes.find(x => x.id === e.active.id);
-    shape.position.x += e.delta.x;
-    shape.position.y += e.delta.y;
-    const _shapes = shapes.map(x => {
-      if (x.id === shape.id) return shape;
-      return x;
-    });
-    setShapes(_shapes);
+    if (e.over?.id === 'game-board') {
+      const shape = shapes.find(x => x.id === e.active.id);
+      shape.position.x += e.delta.x;
+      shape.position.y += e.delta.y;
+      const _shapes = shapes.map(x => {
+        if (x.id === shape.id) return shape;
+        return x;
+      });
+      setShapes(_shapes);
+    }
+    if (e.over?.id === 'trash') {
+      const newShapes = [];
+      for (let i = 0; i < shapes.length; i++) {
+        if (shapes[i].id !== e.active.id) {
+          newShapes.push(shapes[i]);
+        }
+      }
+      setShapes(newShapes);
+    }
   };
 
   return (
     <div className='game-container'>
-      <ToolBar
-        setSelectedShape={setSelectedShape}
-        setSelectedColor={setSelectedColor}
-        handleSubmitShape={handleSubmitShape}
-      />
       <DndContext onDragEnd={handleDragEnd}>
+        <ToolBar
+          setSelectedShape={setSelectedShape}
+          setSelectedColor={setSelectedColor}
+          handleSubmitShape={handleSubmitShape}
+        />
         <GameBoard
           shapes={shapes}
           handleChangeExistingShapeColor={handleChangeExistingShapeColor}
