@@ -25,13 +25,13 @@ app.use(cors({
 }));
 
 const db = mongoose.connection
-// db.on('error', (err) => {
-//     console.log('Error connecting to db')
-// })
+db.on('error', (err) => {
+    console.log('Error connecting to db')
+})
 
-// db.once('open', () => {
-//     console.log('Connected to Database');
-// });
+db.once('open', () => {
+    console.log('Connected to Database');
+});
 
 // app.use(bodyParser.json());
 
@@ -41,15 +41,13 @@ app.use(express.json())
 //     res.sendStatus(200)
 // })
 
-app.use('/', apiRoutes)
+app.use('/', apiRoutes);
 
 //unknown route handler
 app.use((req, res) => {
     // console.log('req', req)
     console.log('Invalid page')
-    res.status(400)
+    return res.status(400).send();
 })
 
-  const server = app.listen(PORT, () => console.log(`Listening on PORT: ${PORT}`));
-
-  module.exports = server;
+module.exports = app.listen(PORT, () => console.log(`Listening on PORT: ${PORT}`));
