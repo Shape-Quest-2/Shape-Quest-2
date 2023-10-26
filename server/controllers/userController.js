@@ -43,18 +43,12 @@ module.exports = {
         return;
       }
       
-      const isPasswordValid = await bcrypt.compare(password, user.password);
-      
-      if (isPasswordValid) {
-        console.log('Active user found');
-        res.status(200).json({ message: 'Login successful', redirectTo: '/GameContainer' });
-      } else {
-        console.log('Incorrect password');
-        res.status(400).json({ message: 'Incorrect password' });
-      }
+      res.locals.loggedIn = await bcrypt.compare(password, user.password);
+      next();
+
     } catch (err) {
-      console.error('Error logging in:', err);
-      res.status(500).json({ message: 'Server side error during login' });
+      return next(err);
+      // res.status(500).json({ message: 'Server side error during login' });
     }
   },
 };
