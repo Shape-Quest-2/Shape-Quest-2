@@ -9,6 +9,7 @@ userController.signUp = async (req, res, next) => {
   // console.log(req.params)
   try {
     // console.log(req)
+    console.log('req =', req.body)
     const { username, password } = req.body;
     console.log('Creating user...');
     bcrypt.hash(password, 10, async (err, hash) => {
@@ -22,13 +23,14 @@ userController.signUp = async (req, res, next) => {
         await newUser.save()
         console.log('New user Created', { username, password });
         res.locals.newUser = newUser;
+        next();
       } catch (saveError) {
-        console.error('Error saving user', saveError);
+        // console.error('Error saving user', saveError);
         return next(saveError) 
       }
     });
   } catch (err) {
-    console.error('Error creating user', err)
+    // console.error('Error creating user', err)
     return next(err);
   }
 }
