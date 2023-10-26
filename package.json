@@ -49,7 +49,7 @@
   "scripts": {
     "build": "NODE_ENV=production webpack",
     "clean": "rm -rfv ./dist",
-    "dev": "NODE_ENV=development concurrently 'nodemon server/server.js' 'webpack-dev-server --open --mode development'",
+    "dev": "NODE_ENV=development concurrently 'nodemon server/server.js' 'webpack-dev-server --open'",
     "start": "NODE_ENV=production PORT=8080 node server/server.js",
     "test": "jest"
   },
