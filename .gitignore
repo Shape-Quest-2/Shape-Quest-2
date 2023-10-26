@@ -1,4 +1,11 @@
+# npm-related ignores
 node_modules/
+
+# log files
 *.log
+
+# macOS metadata files
 .DS_Store
+
+# webpack build artifacts
 dist/

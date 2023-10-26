@@ -11,16 +11,13 @@ const apiRoutes = require('./routes/api');
 // server config / baseline middleware setup
 // -----------------------------------------
 const app = express();
-const PORT = process.env.PORT || 3000;
-
-//serve static files
-app.use(express.static(path.join(__dirname, 'assets')));
+const PORT = process.env.PORT;
 
 // CORS middleware
 app.use(cors({
-    origin: 'http://localhost:8080',
-    methods: ['GET', 'POST'],
-    allowedHeaders: ['Content-Type', 'Authorization']
+  origin: 'http://localhost:' + PORT,
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
 // Set up connection to the database
@@ -35,12 +32,20 @@ app.use(express.json());
 
 // Shape Quest API routing
 // -----------------------
-app.use('/', apiRoutes);
+// serve static files
+app.use(express.static(path.join(__dirname, '../dist')));
+
+app.get('/', (req, res) => {
+  return res.status(200).sendFile('/index.html');
+});
+
+// serve API routes
+app.use('/api', apiRoutes);
 
 // Handle requests for any route we haven't defined
 app.use((req, res) => {
-    console.log(`[${new Date().toUTCString()}] INFO: Client attempted to access unknown resource at ${req.originalUrl}. Returning 404.`);
-    return res.status(404);
+  console.log(`[${new Date().toUTCString()}] INFO: Client attempted to access unknown resource at ${req.originalUrl}. Returning 404.`);
+  return res.status(404);
 });
 
 app.listen(PORT, () => console.log(`Listening on PORT: ${PORT}`));

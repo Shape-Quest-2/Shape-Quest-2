@@ -8,23 +8,17 @@ function LoginForm() {
   const [loggedIn, setLoggedIn] = useState(false);
   const [loginError, setLoginError] = useState('');
   const navigate = useNavigate();
-
   const loggedData = {
     username,
     password,
   };
-
+  
   const handleSubmit = async e => {
     e.preventDefault();
     //signup post (once we have server running)
-    const API_ENDPOINT = 'http://localhost:3000/';
-
     try {
-      const response = await axios.post(API_ENDPOINT, loggedData);
-      console.log('responding data =>', response);
-      console.log('succesful login', response.data);
-
-      //navigate('/GameContainer');
+      const response = await axios.post('/api/login', loggedData);
+      
       setLoggedIn(true);
 
       // if (response.data.success) {
@@ -34,7 +28,7 @@ function LoginForm() {
       //     setLoginError(response.data.message || "Login Failed. Please try again");
       // }
     } catch (err) {
-      console.log('Error loggin user in', err);
+      console.log('Error logging user in', err);
     }
   };
 

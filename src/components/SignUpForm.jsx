@@ -18,10 +18,8 @@ function SignUpForm() {
   const handleSubmit = async e => {
     e.preventDefault();
 
-    const API_ENDPOINT = 'http://localhost:3000/SignUpForm';
-
     try {
-      const response = await axios.post(API_ENDPOINT, formData);
+      const response = await axios.post('/api/signup', formData);
       console.log('Saved username succesfully into DB', response.data);
     } catch (err) {
       console.log('Error saving user', err);
