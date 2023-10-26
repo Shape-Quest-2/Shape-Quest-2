@@ -11,11 +11,11 @@ const apiRoutes = require('./routes/api');
 // server config / baseline middleware setup
 // -----------------------------------------
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT;
 
 // CORS middleware
 app.use(cors({
-  origin: 'http://localhost:8080',
+  origin: 'http://localhost:' + PORT,
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
