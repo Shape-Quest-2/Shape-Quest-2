@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ShapeTools({ setSelectedShape, handleSubmitShape }) {
+function ShapeTools({ handleSubmitShape }) {
   return (
     <section id='shapes'>
       <button
