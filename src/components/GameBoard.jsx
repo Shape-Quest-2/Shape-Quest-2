@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import '/src/sass/styles.css';
 
 const GameBoard = ({ shapes, handleChangeExistingShapeColor }) => {
   const renderShapes = shapes.map((element, index) => (
