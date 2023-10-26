@@ -87,6 +87,8 @@ body {
   max-width: 800px;
   height: 95%;
   margin: 0 auto;
+  background-color:  rgba(255,255,255,.33);
+  margin-bottom: 30px;
 }
 
 .login-form {
@@ -146,18 +148,25 @@ body {
   position: relative;
   height: 400px;
   width: 1000px;
+
+  /* #circle {
+    margin-left: 3px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+  } */
 }
-.trash {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border: 3px solid black;
-  border-radius: 15px;
-  margin-top: 3px;
-  margin-bottom: 3px;
-  position: relative;
-  height: 100px;
-  width: 100px;
-  background-color: #060707;
-  color: #c8c6cb;
+
+.circle1 {
+  margin-left: 3px;
+  margin-right: 3px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: white;
+  border-color: black;
+  border: solid;
 }
 
 .square1 {
@@ -184,16 +193,6 @@ body {
   margin-left: 3px;
   margin-right: 3px;
   width: 120px;
-  height: 80px;
-  border-radius: 50%;
-  background-color: white;
-  border-color: black;
-  border: solid;
-}
-.circle1 {
-  margin-left: 3px;
-  margin-right: 3px;
-  width: 80px;
   height: 80px;
   border-radius: 50%;
   background-color: white;
@@ -300,15 +299,6 @@ body {
   height: 60px;
   border-radius: 50%;
   background-color: white;
-}
-
-#triangle {
-  width: 0px;
-  height: 0px;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-bottom: 87px solid;
-  background-color: transparent;
 }
 
 #rectangle {
