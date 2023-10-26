@@ -67,6 +67,7 @@
   "homepage": "https://github.com/Shape-Quest/Shape-Quest#reame",
   "jest": {
     "testEnvironment": "node",
+    "forceExit": true,
     "setupFiles": [
       "<rootDir>/jest.setup.js"
     ]

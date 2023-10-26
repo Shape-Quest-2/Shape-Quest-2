@@ -50,5 +50,6 @@ app.use((req, res) => {
     res.status(400)
 })
 
- app.listen(PORT, () => console.log(`Listening on PORT: ${PORT}`));
+  const server = app.listen(PORT, () => console.log(`Listening on PORT: ${PORT}`));
 
+  module.exports = server;
