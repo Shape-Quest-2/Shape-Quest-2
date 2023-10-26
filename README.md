@@ -18,13 +18,13 @@ Have a specific color in mind? No worries! Double-click on an existing shape to 
 Move your shapes around as you please. Simply drag and drop them to reposition and rearrange them on your canvas. It's your world of shapes, and you're the master creator.
 
 ## How to Play
-Sign-up for an account and login.
-Launch the game and explore the tool-bar.
-Click on a shape to add it to your canvas.
-Select a color from the tool-bar and apply it to your chosen shape.
-Want to change a shape's color? Double-click it.
-Move, arrange, and design your canvas by dragging and dropping shapes.
-Let your creativity flow and create your unique masterpiece!
+1. Sign-up for an account and login.  
+2. Launch the game and explore the tool-bar.  
+3. Click on a shape to add it to your canvas.  
+4. Select a color from the tool-bar and apply it to your chosen shape.  
+5. Want to change a shape's color? Double-click it.  
+6. Move, arrange, and design your canvas by dragging and dropping shapes.  
+7. Let your creativity flow and create your unique masterpiece!  
 
 ## Get Started
 Shape Quest 2 is a fantastic way for kids to have fun while enhancing their knowledge of shapes and colors. So, are you ready to embark on your creative adventure? Get started now and unlock your artistic potential!
