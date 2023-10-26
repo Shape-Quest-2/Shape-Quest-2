@@ -6,7 +6,6 @@
     "express": "^4.18.2",
     "mongodb": "^6.1.0",
     "mongoose": "^7.6.3",
-    "nodemon": "^3.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.17.0"
@@ -33,6 +32,7 @@
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "node-sass": "^9.0.0",
+    "nodemon": "^3.0.1",
     "sass": "^1.69.4",
     "sass-loader": "^13.3.2",
     "style-loader": "^3.3.3",
@@ -47,9 +47,11 @@
   "version": "1.0.0",
   "main": "server/server.js",
   "scripts": {
-    "test": "jest",
-    "build": "webpack --mode production",
-    "start": "concurrently \"nodemon server/server.js\" \"webpack-dev-server --open --mode development\""
+    "build": "NODE_ENV=production webpack",
+    "clean": "rm -rfv ./dist",
+    "dev": "NODE_ENV=development concurrently 'nodemon server/server.js' 'webpack-dev-server --open'",
+    "start": "NODE_ENV=production PORT=8080 node server/server.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
