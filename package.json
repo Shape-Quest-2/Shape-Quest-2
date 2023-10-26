@@ -11,7 +11,9 @@
     "mongoose": "^7.6.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.17.0"
+    "react-router-dom": "^6.17.0",
+    "text-encoding": "^0.7.0",
+    "util.promisify": "^1.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.23.2",
@@ -36,6 +38,7 @@
     "jest-environment-jsdom": "^29.7.0",
     "node-sass": "^9.0.0",
     "nodemon": "^3.0.1",
+    "regenerator-runtime": "^0.14.0",
     "sass": "^1.69.4",
     "sass-loader": "^13.3.2",
     "style-loader": "^3.3.3",
@@ -68,6 +71,8 @@
   },
   "homepage": "https://github.com/Shape-Quest/Shape-Quest#reame",
   "jest": {
+    "globalSetup": "./jest-setup.js",
+    "globalTeardown": "./jest-teardown.js",
     "testEnvironment": "jest-environment-jsdom"
   }
 }

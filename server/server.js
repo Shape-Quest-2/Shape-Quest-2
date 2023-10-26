@@ -48,4 +48,4 @@ app.use((req, res) => {
   return res.status(404);
 });
 
-app.listen(PORT, () => console.log(`Listening on PORT: ${PORT}`));
+module.exports = app.listen(PORT, () => console.log(`Listening on PORT: ${PORT}`));

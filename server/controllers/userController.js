@@ -1,5 +1,5 @@
+const bcrypt = require ('bcrypt');
 const User = require('../models/userModel');
-const bcrypt = require ('bcrypt')
 
 module.exports = {
   signUp: async (req, res, next) => {
@@ -13,12 +13,11 @@ module.exports = {
           return next(err)
         }
         const newUser = new User({ username, password: hash });
-        console.log('encrypted password = ', hash)
         try {
           await newUser.save()
           console.log('New user Created', { username, password });
           res.locals.newUser = newUser;
-      
+          return next();      
         } catch (saveError) {
           console.error('Error saving user', saveError);
           return next(saveError) 
@@ -31,22 +30,16 @@ module.exports = {
   },
       
   login: async (req, res, next) => {
-    console.log('logging in');
     try {
       const { username, password } = req.body;
-      
       const user = await User.findOne({ username }).exec();
-      
-      if (!user) {
-        console.log('User not found');
-        res.status(400).json({ message: 'User not found' });
-        return;
+      res.locals.loggedIn = false;
+      if (user) {
+        res.locals.loggedIn = await bcrypt.compare(password, user.password);
       }
-      
-      res.locals.loggedIn = await bcrypt.compare(password, user.password);
-      next();
-
-    } catch (err) {
+      return next();
+    }
+    catch (err) {
       return next(err);
       // res.status(500).json({ message: 'Server side error during login' });
     }
