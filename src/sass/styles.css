@@ -4,7 +4,6 @@ div {
   align-items: center;
   height: 98vh;
   flex-direction: column;
-  background-color: ;
 }
 
 body {
@@ -20,7 +19,11 @@ body {
 #root {
   background-color: lightyellow;
   background: rgb(34, 193, 195);
-  background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  );
   width: fit;
   height: fit;
 }
@@ -32,9 +35,9 @@ body {
   /* padding: 20px; */
 
   color: rgb(21, 97, 227);
-  -webkit-text-stroke: .25px #29ace5;
-  text-shadow: 1px 1px 5px #060707, -1px -1px 5px #090a0a
-    /* position: fixed; */
+  -webkit-text-stroke: 0.25px #29ace5;
+  text-shadow: 1px 1px 5px #060707, -1px -1px 5px #090a0a;
+  /* position: fixed; */
 }
 
 #app-header:hover {
@@ -60,7 +63,6 @@ body {
 }
 
 @keyframes bounce {
-
   0%,
   100% {
     transform: translateY(0);
@@ -144,17 +146,51 @@ body {
   position: relative;
   height: 400px;
   width: 1000px;
-
-  /* #circle {
-    margin-left: 3px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: white;
-  } */
+}
+.trash {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 3px solid black;
+  border-radius: 15px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  position: relative;
+  height: 100px;
+  width: 100px;
+  background-color: #060707;
+  color: #c8c6cb;
 }
 
-#circle1 {
+.square1 {
+  margin-left: 3px;
+  margin-right: 3px;
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border-color: black;
+  border: solid;
+}
+
+.rectangle1 {
+  margin-left: 3px;
+  margin-right: 3px;
+  width: 120px;
+  height: 80px;
+  background-color: white;
+  border-color: black;
+  border: solid;
+}
+
+.oval1 {
+  margin-left: 3px;
+  margin-right: 3px;
+  width: 120px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: white;
+  border-color: black;
+  border: solid;
+}
+.circle1 {
   margin-left: 3px;
   margin-right: 3px;
   width: 80px;
@@ -165,38 +201,7 @@ body {
   border: solid;
 }
 
-#square1 {
-  margin-left: 3px;
-  margin-right: 3px;
-  width: 80px;
-  height: 80px;
-  background-color: white;
-  border-color: black;
-  border: solid;
-}
-
-#rectangle1 {
-  margin-left: 3px;
-  margin-right: 3px;
-  width: 120px;
-  height: 80px;
-  background-color: white;
-  border-color: black;
-  border: solid;
-}
-
-#oval1 {
-  margin-left: 3px;
-  margin-right: 3px;
-  width: 120px;
-  height: 80px;
-  border-radius: 50%;
-  background-color: white;
-  border-color: black;
-  border: solid;
-}
-
-#diamond1 {
+.diamond1 {
   margin-top: 5px;
   margin-left: 20px;
   margin-right: 20px;
@@ -221,6 +226,8 @@ body {
   right: 0;
   position: absolute;
 }
+
+
 
 #blueButton {
   background-color: blue;
@@ -257,7 +264,6 @@ body {
   height: 60px;
   border-radius: 50px;
   margin: 5px;
-
 }
 
 #shapes {
@@ -271,7 +277,6 @@ body {
   right: 0;
   position: absolute;
   margin: 5px;
-
 }
 
 #colors {
@@ -287,7 +292,6 @@ body {
   height: 60px;
   background-color: white;
   border-color: black;
-
 }
 
 #circle {
@@ -296,17 +300,14 @@ body {
   height: 60px;
   border-radius: 50%;
   background-color: white;
-
-
-
 }
 
 #triangle {
-  width: 50px;
-  height: 50px;
+  width: 0px;
+  height: 0px;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
-  border-bottom: 100px solid;
+  border-bottom: 87px solid;
   background-color: transparent;
 }
 
