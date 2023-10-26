@@ -8,7 +8,6 @@ function LoginForm() {
   const [loggedIn, setLoggedIn] = useState(false);
   const [loginError, setLoginError] = useState('');
   const navigate = useNavigate();
-
   const loggedData = {
     username,
     password,
@@ -19,10 +18,7 @@ function LoginForm() {
     //signup post (once we have server running)
     try {
       const response = await axios.post('/api/login', loggedData);
-      console.log('responding data =>', response);
-      console.log('succesful login', response.data);
-
-      //navigate('/GameContainer');
+      
       setLoggedIn(true);
 
       // if (response.data.success) {
