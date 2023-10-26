@@ -21,11 +21,12 @@ describe('Route integration testing', () => {
     it('should respond with status 200 in /SignUpForm', async () => {
         const response = await request(app)
         .post('/SignUpForm')
-        .set('Content-Type', 'application/json')
-        .send(JSON.stringify({ username: 'testUser', password: 'testpass' }));
+        .send({ username: 'testUser', password: 'testpass' });
+        console.log(response)
 
         expect(response.status).toEqual(200);
-        // expect(response.body).toEqual("username")
+
+        expect(response).toEqual('username')
 
     })
 });

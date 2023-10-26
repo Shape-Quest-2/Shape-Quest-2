@@ -1,9 +1,9 @@
 // const User = require('../server')
-const userController = {};
 const mongoose = require('mongoose');
 const User = require('../models/userModel');
 const bcrypt = require ('bcrypt')
 
+const userController = {};
 
 userController.signUp = async (req, res, next) => {
   // console.log(req.params)

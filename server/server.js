@@ -8,7 +8,7 @@ const userModel = require('./models/userModel')
 const bodyParser = require('body-parser');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = 3000;
 
 
 
@@ -25,9 +25,9 @@ app.use(cors({
 }));
 
 const db = mongoose.connection
-db.on('error', (err) => {
-    console.log('Error connecting to db')
-})
+// db.on('error', (err) => {
+//     console.log('Error connecting to db')
+// })
 
 // db.once('open', () => {
 //     console.log('Connected to Database');
